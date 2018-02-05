@@ -11,7 +11,7 @@
   <!-- Import RDFLib dependency. Creates a $rdf global variable -->
   <script src="https://solid.github.io/releases/rdflib.js/rdflib-0.5.0.min.js"></script>
   <!-- Import solid.js itself -->
-  <script src="../dist/solid.js"></script>
+  <script src="solid-client.js"></script>
   <!--<script src="https://solid.github.io/releases/solid.js/solid-0.13.0.min.js"></script>-->
 </head>
 <body>
@@ -188,7 +188,8 @@
 </div><!-- / page's .container -->
 <script>
   // RDFLib is already loaded, exported as a global var $rdf
-  var solid = require('solid')
+//  var solid = require('solid')
+  var solid = SolidClient;
   // Configure Solid (optional step)
   // solid.config.proxyUrl = 'https://databox.me/,proxy?uri={uri}'
   // solid.config.proxyUrl = 'https://localhost:8443/proxy?uri={uri}'
