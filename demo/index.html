@@ -36,6 +36,8 @@
       <!-- See the loginTest() function below -->
       <button type="button" class="btn btn-primary"
               id="login">Log In</button>
+      <button type="button" class="btn btn-primary"
+              id="logout">Log Out</button>
     </form>
   </div> <!-- / Login Test section -->
   <div class="demo-section">
@@ -204,6 +206,11 @@
       if (webId) {
         loginTest(webId)
       }
+    })
+    document.getElementById('logout').addEventListener('click', function() {
+      console.log('Logout');
+      solid.auth.logout();
+      document.getElementById('currentWebId').innerHTML = '';
     })
     // Init the Load Profile button
     document.getElementById('loadProfile').addEventListener('click',
