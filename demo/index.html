@@ -210,7 +210,8 @@
     document.getElementById('logout').addEventListener('click', function() {
       console.log('Logout');
       solid.auth.logout();
-      document.getElementById('currentWebId').innerHTML = '';
+      updateCurrentUser();
+
     })
     // Init the Load Profile button
     document.getElementById('loadProfile').addEventListener('click',
