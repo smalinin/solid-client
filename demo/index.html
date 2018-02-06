@@ -298,7 +298,8 @@
   // Gets called when a user presses the 'Log In' button
   function loginTest (webId) {
     console.log('Logging in to %s', webId)
-    solid.auth.login(webId).then(function (loggedInWebId) {
+//    solid.auth.login(webId).then(function (loggedInWebId) {
+    solid.tls.login(webId).then(function (loggedInWebId) {
       console.log('Welcome user: %s', loggedInWebId)
       document.getElementById('currentWebId').innerHTML = loggedInWebId
     }).catch(function (reason) {
